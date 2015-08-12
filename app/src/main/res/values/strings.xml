@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ellak Android Education</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_option_screen">Option Screen</string>
+    <string name="title_activity_main_screen">Main Screen</string>
+    <string name="title_activity_result_screen">Result Screen</string>
+</resources>
