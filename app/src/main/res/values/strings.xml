@@ -6,4 +6,14 @@
     <string name="title_activity_option_screen">Option Screen</string>
     <string name="title_activity_main_screen">Main Screen</string>
     <string name="title_activity_result_screen">Result Screen</string>
+
+    <string name="object">Επιλογή γνωστικού αντικειμένου</string>
+    <string name="edu">Εκπαίδευση</string>
+    <string name="test">Εξέταση</string>
+    <string name="end">Τερματισμός</string>
+
+    <string name="choice">Επιλογή</string>
+    <string name="next">Είσαι σίγουρος ότι θέλεις να συνεχίσεις;</string>
+    <string name="newdb">Ανανέωση της βάσης δεδομένων;</string>
+
 </resources>
