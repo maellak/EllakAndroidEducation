@@ -1,11 +1,161 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/bg"
+    android:translationZ="@dimen/abc_action_bar_subtitle_bottom_margin_material"
+    android:id="@+id/mainLayout"
+    android:gravity="top">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ΕΡΩΤΗΣΗ: "
+        android:id="@+id/keimenoErwtisis"
+        android:textColorHighlight="@color/abc_primary_text_material_dark"
+        android:textColor="@color/primary_dark_material_dark"
+        android:textSize="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="01"
+        android:id="@+id/arithmosErwtisis"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/keimenoErwtisis"
+        android:layout_toEndOf="@+id/keimenoErwtisis"
+        android:textSize="32dp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/keimenoErwtisis"
+        android:id="@+id/linearLayout"
+        android:weightSum="1"
+        android:layout_above="@+id/next"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stop"
+            android:id="@+id/Eikona"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_toRightOf="@+id/arithmosErwtisis"
+            android:layout_toEndOf="@+id/arithmosErwtisis"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/Erwtisi"
+            android:text="Το παραπάνω σήμα, τι συμβολίζει;"
+            android:layout_below="@+id/Eikona"
+            android:layout_centerHorizontal="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pb"
+            android:progressDrawable="@drawable/greenpb"
+            android:indeterminate="false"
+            android:layout_below="@+id/Erwtisi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_below="@+id/Erwtisi"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context="org.teiath.ellak.ellakandroideducation.MainScreen">
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/b0"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/b1"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/b2"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/b3"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/b4"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:text="next"
+        android:id="@+id/next"
+        android:src="@drawable/next"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout" />
+
+    <ImageButton
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:text="confirm"
+        android:src="@drawable/confirm"
+        android:background="@android:color/transparent"
+        android:id="@+id/confirm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        />
 
 </RelativeLayout>
